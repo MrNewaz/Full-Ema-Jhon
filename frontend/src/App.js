@@ -8,6 +8,7 @@ import Shipment from './components/Shipment/Shipment';
 import Inventory from './components/Inventory/Inventory';
 import { createContext, useState } from 'react';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import ProductDetail from './components/ProductDetail/ProductDetail';
 
 export const UserContext = createContext();
 
@@ -37,6 +38,9 @@ function App() {
           <PrivateRoute path='/shipment'>
             <Shipment />
           </PrivateRoute>
+          <Route path='/product/:productKey'>
+            <ProductDetail />
+          </Route>
           <Route path='*'>
             <h1>404 under construction</h1>
           </Route>

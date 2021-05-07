@@ -12,6 +12,7 @@ import happyImage from '../../images/giphy.gif';
 import { useHistory } from 'react-router';
 
 const Review = () => {
+  document.title = 'Review';
   const [cart, setCart] = useState([]);
   const [orderPlaced, setOrderPlaced] = useState(false);
 
@@ -59,9 +60,7 @@ const Review = () => {
 
       <div className='cart-container'>
         <Cart cart={cart}>
-          <button onClick={handleProceedCheckout} className='main-btn'>
-            Proceed Checkout
-          </button>
+          <button onClick={handleProceedCheckout}>Proceed Checkout</button>
         </Cart>
       </div>
     </div>
